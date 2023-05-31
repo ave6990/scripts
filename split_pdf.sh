@@ -5,6 +5,8 @@
 DEPARTMENT=9
 ENGINEER=61
 YEAR=2023
+DENSITY=250
+DEPTH=4
 
 source_file=$1
 pages_count=`identify -format "%n\n" $source_file | head -1`
@@ -33,7 +35,7 @@ for ((a=pages_in_out_files-1; a<=pages_count; a=a+pages_in_out_files ))
 do
     let "s=$a-$pages_in_out_files+1"
     echo "Обработка страниц $s-$a..."
-    convert $source_file[$s-$a] $DEPARTMENT-$ENGINEER-$start_number-$YEAR.pdf
+    convert -density $DENSITY -depth $DEPTH $source_file[$s-$a] $DEPARTMENT-$ENGINEER-$start_number-$YEAR.pdf
     let "start_number=$start_number+$direction"
 done
 
