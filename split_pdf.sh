@@ -55,7 +55,7 @@ done
 if [ -d "$SCAN_DIRECTORY" ]
 then
     echo "Резервное копирование..."
-    cp $DEPARTMENT-$ENGINEER-*-$YEAR.pdf $SCAN_DIRECTORY/
+    cp $DEPARTMENT-$ENGINEER-*-$YEAR.pdf "$SCAN_DIRECTORY"/
 else
     echo "ВНИМАНИЕ!!! Папка резервного копирования недоступна!"
     echo "Резервное копирование НЕ выполнено!"
