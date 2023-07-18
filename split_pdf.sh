@@ -47,4 +47,6 @@ do
     let "start_number=$start_number+$direction"
 done
 
+mv $source_file ./trash
+
 echo "Выполнено!"

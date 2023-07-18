@@ -23,6 +23,5 @@ else
 fi
 
 mv $DEPARTMENT-$ENGINEER-*-$YEAR.pdf ./scans/
-mv $source_file ./trash
 
 echo "Выполнено!"
