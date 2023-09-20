@@ -21,5 +21,5 @@ const crc16 = (buf) => {
     return crc
 }
 
-console.log(crc16(Uint8Array.from([01, 03, 00, 00, 00, 01])).toString(16))
+console.log(crc16(Uint8Array.from([00, 03, 01, 00, 00, 01])).toString(16))
 
